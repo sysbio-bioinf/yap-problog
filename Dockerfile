@@ -2,8 +2,8 @@ FROM ubuntu:precise
 
 MAINTAINER Johann M. Kraus <johann.kraus@uni-ulm.de>
 
-WORKDIR /home/rbm
-COPY cudd-Makefile /home/rbm/cudd-Makefile
+WORKDIR /home/problog
+COPY cudd-Makefile /home/problog/cudd-Makefile
 
 RUN apt-get update && apt-get install -y git \
     make \
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y git \
  && git clone https://github.com/vscosta/yap-6.3.git \
  && cd yap-6.3 \
  && git checkout -b 6.3.0 6.3.0 \
- && ./configure --with-cudd="/home/rbm/cudd" --enable-tabling=yes \
+ && ./configure --with-cudd="/home/problog/cudd" --enable-tabling=yes \
  && make \
  && make install \
  && cd .. \
