@@ -1,0 +1,12 @@
+Dockerfile to build Problog docker image.
+Built from Problog version 1 packed into YAP.
+This version requires CUDD.
+
+To build this image:
+$ docker build -t sysbio-bioinf/problog .
+
+To run this image:
+$ docker run --rm -ti sysbio-bioinf/problog
+
+To run a yap program:
+$ yap -l <<FILEPATH>>
