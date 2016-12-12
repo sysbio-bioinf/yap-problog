@@ -1,12 +1,12 @@
 Dockerfile to build Problog docker image.
-Built from Problog version 1 packed into YAP.
-This version requires CUDD.
+Built from Problog version 1 packed into YAP (YAP version 6.3.0 is used).
+This version requires CUDD. CUDD's Makefile is edited to work with Ubuntu Precise.
 
 To build this image:
-$ docker build -t sysbio-bioinf/problog .
+$ docker build -t sysbio-bioinf/yap-problog .
 
 To run this image:
-$ docker run --rm -ti sysbio-bioinf/problog
+$ docker run --rm -ti sysbio-bioinf/yap-problog
 
 To run a yap program:
 $ yap -l <<FILEPATH>>
