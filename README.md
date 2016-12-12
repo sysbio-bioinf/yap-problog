@@ -5,8 +5,11 @@ This version requires CUDD. CUDD's Makefile is edited to work with Ubuntu Precis
 To run this image:
 $ docker run --rm -ti sysbiobioinf/yap-problog
 
-To run a yap program:
-$ yap -l <<FILEPATH>>
+To run yap:
+$ yap
 
 To consult problog within yap:
 $ :-use_module(library(problog)).
+
+To run a yap-problog program, e.g. 'simple.pl':
+$ yap -l simple.pl
